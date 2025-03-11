@@ -1008,8 +1008,9 @@ const quizData = {
   "accessPasswords": [
     {
       "id": "1",
-      "password": "admin"
+      "password": "usuarios"
     }
+    //holas
   ],
   "adminCredentials": [
     {
