@@ -1,0 +1,540 @@
+{
+  "quizConfig": {
+    "title": "Examen Teórico - Licencia de Conducir Argentina",
+    "theme": {
+      "primary": "#2563eb",
+      "primaryLight": "#3b82f6",
+      "success": "#059669",
+      "error": "#dc2626",
+      "background": "#f0f7ff"
+    },
+    "questions": [
+
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmOvAepGNF9KdCDzkTlR2bDFPKtAOT0pCyBQ&s",
+        "options": [
+        "Ceda el paso",
+        "Prohibido estacionar",
+        "Pare",
+        "Velocidad máxima 40 km/h"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://pbs.twimg.com/profile_images/378800000277422349/4093a2c2b2e6b55b75932ebe638d3592_400x400.jpeg",
+        "options": [
+        "Prohibido adelantar",
+        "Curva peligrosa",
+        "Cruce de peatones",
+        "Zona urbana"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal significa:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUJrA9lmPqeaFf5tCv9g-nP_k_xK9MCPlW1w&s",
+        "options": [
+        "Pare",
+        "Sentido obligatorio",
+        "Prohibido girar",
+        "Ceda el paso"
+        ],
+        "correct": 3
+        },
+        {
+        "question": "Esta señal prohíbe:",
+        "imageUrl": "https://s3.amazonaws.com/cdn.dmv-permit-test.com/images/road-signs/medium/20.jpg",
+        "options": [
+        "Girar a la derecha",
+        "Estacionar",
+        "Adelantar",
+        "Circular a más de 60 km/h"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://senaleticasestampa.cl/cdn/shop/files/Velocidad-Maxima-60km.jpg?v=1686697989",
+        "options": [
+        "Velocidad mínima 60 km/h",
+        "Velocidad máxima 60 km/h",
+        "Prohibido circular a 60 km/h",
+        "Distancia de 60 metros"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal advierte sobre:",
+        "imageUrl": "https://img.uline.com/is/image/uline/H-6584?$Mobile_SI$",
+        "options": [
+        "Zona escolar",
+        "Cruce de peatones",
+        "Cruce de ferrocarril",
+        "Prohibido detenerse"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://www.mayfe.es/27338-large_default/DISCO-SENTIDO-OBLIGATORIO-TR-400-A.jpg",
+        "options": [
+        "Girar a la izquierda",
+        "Prohibido girar",
+        "Sentido obligatorio a la derecha",
+        "Ceda el paso"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal prohíbe:",
+        "imageUrl": "https://www.cartelesdeseguridad.com.ar/thumb/000000000000000069221Prohibido-estacionar-color_400x400.jpg",
+        "options": [
+        "Circular",
+        "Adelantar",
+        "Estacionar",
+        "Girar a la izquierda"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://flygraphics.cl/wp-content/uploads/2021/03/F-PI-1a.jpg",
+        "options": [
+        "Cruce de peatones",
+        "Zona urbana",
+        "Cruce de ferrocarril",
+        "Curva peligrosa"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/002/351/750/small_2x/school-zone-symbol-free-vector.jpg",
+        "options": [
+        "Zona escolar",
+        "Prohibido adelantar",
+        "Ceda el paso",
+        "Velocidad máxima 80 km/h"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal prohíbe:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhs6OqPC9Y80vKv4SdOSTIEx39UIA_gYz1bg&s",
+        "options": [
+        "Estacionar",
+        "Girar a la derecha",
+        "Adelantar",
+        "Detenerse"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://static.vecteezy.com/system/resources/previews/002/277/612/non_2x/warning-signs-roundabout-ahead-on-white-background-free-vector.jpg",
+        "options": [
+        "Cruce de caminos",
+        "Rotonda",
+        "Prohibido girar",
+        "Sentido único"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal advierte sobre:",
+        "imageUrl": "https://www.comercturro.com/tiendaonline/documentos/productos/se%C3%B1al%20trafico%20peligro%20animales.JPG",
+        "options": [
+        "Cruce de peatones",
+        "Animales sueltos",
+        "Zona urbana",
+        "Prohibido detenerse"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZytrG-aOQ3SAnmFrI-UEennfz6f8Pdb_kmQ&s",
+        "options": [
+        "Doble sentido",
+        "Prohibido girar",
+        "Sentido único",
+        "Ceda el paso"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxQcLIvaT7mIPtq0hK6TGV1IYTBbQyNqRjZA&s",
+        "options": [
+        "Pendiente pronunciada",
+        "Cruce de ferrocarril",
+        "Curva peligrosa",
+        "Zona escolar"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://www.isaludes.com/media/catalog/product/cache/a486d09f3fb9f318d60be7e8ebb8756f/F/I/FIN-DE-PROHIBICION-DE-ADELANTAMIENTO-R-502_DIS_MOP-8WKCb.jpg",
+        "options": [
+        "Inicio de restricción",
+        "Fin de restricción",
+        "Prohibido estacionar",
+        "Velocidad máxima 40 km/h"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://flygraphics.cl/wp-content/uploads/2021/03/F-PO%E2%80%9314..jpg",
+        "options": [
+        "Cruce de bicicletas",
+        "Zona escolar",
+        "Cruce de peatones",
+        "Prohibido adelantar"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://lh4.googleusercontent.com/proxy/adbkWnM4411LvBhfQ2pSWO0ew5cqDyXiPUtwXCqbVLsrT_iQed9H4G3I9sw-US6c47GJfw4qqLq4vIqrXnpW7moG3qHXUSt5MhGqI46hOmQl9A",
+        "options": [
+        "Prohibido estacionar",
+        "Estacionamiento permitido",
+        "Detención permitida",
+        "Sentido obligatorio"
+        ],
+        "correct": 1
+        },
+        
+        {
+        "question": "Esta señal advierte sobre:",
+        "imageUrl": "https://lh4.googleusercontent.com/proxy/cDCODSQnjM6vLG-SsgNv2xPxjKC2f5rFhE1r77E5jI2vlMIk3RtVDg-o_MvbCiqubEFq7xg6IUxMx5puC7zSGLWNQwA9Ca4cOBmzbGO8ugaZ3Q",
+        "options": [
+        "Cruce de peatones",
+        "Curva peligrosa",
+        "Viento lateral",
+        "Zona escolar"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://ventasaldo.com/22792-home_default/senal-rd727022-120x120mm-inox-hospital.jpg",
+        "options": [
+        "Zona escolar",
+        "Cruce de ferrocarril",
+        "Prohibido estacionar",
+        "Hospital"
+        ],
+        "correct": 3
+        },
+        {
+        "question": "Esta señal prohíbe:",
+        "imageUrl": "https://st.depositphotos.com/1062321/4972/v/450/depositphotos_49723701-stock-illustration-no-cargo-car-road-sign.jpg",
+        "options": [
+        "Girar a la derecha",
+        "Adelantar",
+        "Circular vehículos pesados",
+        "Estacionar"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/012/528/070/small_2x/crosswalk-icon-pedestrian-crossing-icon-illustration-isolated-on-white-background-vector.jpg",
+        "options": [
+        "Prohibido peatones",
+        "Cruce de bicicletas",
+        "Zona de peatones",
+        "Sentido único"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://naisa.es/14207-home_default/senal-vial-estrechamiento-calzada-acero-termolacado.jpg",
+        "options": [
+        "Cruce de ferrocarril",
+        "Estrechamiento de la carretera",
+        "Pendiente pronunciada",
+        "Zona urbana"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://senalescuberos.es/434-thickbox_default/senal-fin-de-limitacion-de-velocidad.jpg",
+        "options": [
+        "Inicio de velocidad máxima",
+        "Fin de velocidad máxima",
+        "Prohibido adelantar",
+        "Ceda el paso"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal prohíbe:",
+        "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/045/905/188/small_2x/traffic-sign-cautionary-closed-to-vehicles-no-bicycles-free-vector.jpg",
+        "options": [
+        "Circular motocicletas",
+        "Girar a la izquierda",
+        "Estacionar",
+        "Adelantar"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://naisa.es/14199-home_default/senal-vial-pavimento-deslizante-acero-termolacado.jpg",
+        "options": [
+        "Cruce de peatones",
+        "Pavimento deslizante",
+        "Zona escolar",
+        "Curva peligrosa"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/009/352/442/small_2x/bicycle-lane-icon-bicycles-only-road-icon-bicycle-path-symbol-bicycles-lane-only-traffic-road-sign-vector.jpg",
+        "options": [
+        "Sentido obligatorio",
+        "Carril para bicicletas",
+        "Prohibido bicicletas",
+        "Cruce de peatones"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal prohíbe:",
+        "imageUrl": "https://static.vecteezy.com/system/resources/thumbnails/017/734/877/small_2x/no-horn-road-sign-no-blowing-of-horn-traffic-sign-on-white-background-vector.jpg",
+        "options": [
+        "Adelantar",
+        "Girar a la derecha",
+        "Sonar la bocina",
+        "Detenerse"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://www.cartelesdeseguridad.com.ar/images/0000000000VI902707839VI9027.jpg",
+        "options": [
+        "Zona urbana",
+        "Cruce de ferrocarril",
+        "Pendiente pronunciada",
+        "Cruce de caminos"
+        ],
+        "correct": 3
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://signovisual.pe/wp-content/uploads/2020/06/Construcci%C3%B3n-06_opt.jpg",
+        "options": [
+        "Obra en construcción",
+        "Cruce de peatones",
+        "Zona escolar",
+        "Curva peligrosa"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM7gxZ1vFfDRdwSdIlb2X9YNbNv5INw8jDtg&s",
+        "options": [
+        "Sentido único",
+        "Doble sentido",
+        "Prohibido girar",
+        "Ceda el paso"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://m.media-amazon.com/images/I/51SWsNsvdeL._AC_UL400_.jpg",
+        "options": [
+        "Semáforo adelante",
+        "Zona escolar",
+        "Cruce de ferrocarril",
+        "Curva peligrosa"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal prohíbe:",
+        "imageUrl": "https://media.istockphoto.com/id/1207567645/es/vector/u-turn-prohibido-se%C3%B1al-de-carretera.jpg?s=612x612&w=0&k=20&c=rCNpEOJGEbiLgwpe0R1Zv16wRliB7sE3ipaV97UnWCw=",
+        "options": [
+        "Hacer giro en U",
+        "Girar a la izquierda",
+        "Adelantar",
+        "Detenerse"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRS8MyrVDgSlBDvOHbKmU5rAeWS0LzTWLbxw&s",
+        "options": [
+        "Zona escolar",
+        "Cruce de peatones",
+        "Desnivel en la carretera",
+        "Pavimento deslizante"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://www.oemlicenseplates.com/uploads/31286/small/basics-handicap-parking-only-sign297a4.jpg",
+        "options": [
+        "Prohibido estacionar",
+        "Detención permitida",
+        "Estacionamiento exclusivo",
+        "Sentido único"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0oloPJFzuvMZCnjjdUMCVfqhoaT6_2g1imA&s",
+        "options": [
+        "Zona urbana",
+        "Cruce de niños",
+        "Cruce de bicicletas",
+        "Curva peligrosa"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://ccimasenalizaciones.pe/wp-content/uploads/2024/07/p-34-proximidad-de-baden.svg",
+        "options": [
+        "Cruce de ferrocarril",
+        "Pendiente pronunciada",
+        "Badén",
+        "Zona escolar"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://lh6.googleusercontent.com/proxy/hFTvEwDMH8iztXo2hOIlNF_WnHyuhpzxbXRJb-DTKJJ4UAqzUOM-PTeo1al10KCUIXYphGSQxNBWHleTd6Xn7TXs_l13FsD9PdyoF6Byq3plEwH_Vg",
+        "options": [
+        "Puesto policial",
+        "Hospital",
+        "Zona escolar",
+        "Parada de autobús"
+        ],
+        "correct": 0
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://e7.pngegg.com/pngimages/417/987/png-clipart-duck-crossing-traffic-sign-warning-sign-duck-animals-dog-like-mammal.png",
+        "options": [
+        "Cruce de peatones",
+        "Zona urbana",
+        "Cruce de animales domésticos",
+        "Curva peligrosa"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCnziK_wQJh6VLLKTGM3YhrQWs_OY5B7iYLQ&s",
+        "options": [
+        "Cruce de ferrocarril",
+        "Pavimento deslizante",
+        "Altura máxima",
+        "Zona escolar"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://w7.pngwing.com/pngs/282/49/png-transparent-warning-sign-hazard-symbol-rockfall-road-danger-signs-angle-text-triangle-thumbnail.png",
+        "options": [
+        "Cruce de niños",
+        "Desprendimiento de rocas",
+        "Zona urbana",
+        "Curva peligrosa"
+        ],
+        "correct": 1
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://lh3.googleusercontent.com/proxy/JIy0z-aABpHN1MV92Xr2f4tSfw7-kJOcCWcj_0lWlL70QXay0NSMIjqAtpBv0I7dTdda1KVJl0LMujq4hR4vDCWPF2Zf6HE7vRdG6p1CqyCqqD5P",
+        "options": [
+        "Prohibido detenerse",
+        "Parada de autobús",
+        "Estación de servicio",
+        "Ceda el paso"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://reynober.net/wp-content/uploads/2024/08/AP_01_P6.png",
+        "options": [
+        "Cruce de peatones",
+        "Zona escolar",
+        "Cruce de tranvía",
+        "Curva peligrosa"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://us.123rf.com/450wm/jojoo64/jojoo641507/jojoo64150700541/42199602-se%C3%B1al-de-tr%C3%A1fico-de-indonesia-inicio-de-la-autopista.jpg",
+        "options": [
+        "Ceda el paso",
+        "Fin de autopista",
+        "Prohibido girar",
+        "Inicio de autopista"
+        ],
+        "correct": 3
+        },
+        {
+        "question": "Esta señal advierte:",
+        "imageUrl": "https://media.istockphoto.com/id/1205228574/es/vector/advertencia-de-mente-de-tr%C3%A1fico-de-la-escuela-se%C3%B1al-de-signo-aislado-en-fondo-blanco.jpg?s=612x612&w=0&k=20&c=VkhRp9tHKADe2Nq7PWZ9EFmBDb4fIQvK0V05loxrv3I=",
+        "options": [
+        "Cruce de peatones",
+        "Zona urbana",
+        "Cruce cerca de escuela",
+        "Curva peligrosa"
+        ],
+        "correct": 2
+        },
+        {
+        "question": "Esta señal indica:",
+        "imageUrl": "https://multisenal.com/wp-content/uploads/2023/11/SIS-16.png",
+        "options": [
+        "Hospital",
+        "Taller mecánico",
+        "Prohibido detenerse",
+        "Ceda el paso"
+        ],
+        "correct": 1
+        }
+        
+        ]
+  },
+  "accessPasswords": [
+    {
+      "id": "1",
+      "password": "solignacautomoviles"
+    },
+    {
+      "id": 1,
+      "password": "administrador"
+    }
+  ],
+  "adminCredentials": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123"
+    }
+  ]
+}
