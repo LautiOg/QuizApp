@@ -32,7 +32,7 @@ export const InitialLogin = ({ onLogin }) => {
   return (
     <div className="initial-login-container">
       <div className="login-card">
-        <h2>Acceso al Quiz de Señales de Tránsito</h2>
+        <h2>Acceso al Quiz de Señales Solignac</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Contraseña:</label>
