@@ -1,29 +1,20 @@
 import { useState, useEffect } from 'react';
-import { CheckCircle2, XCircle, Edit3, Plus, Trash2, Settings, Key } from 'lucide-react';
+import { CheckCircle2, XCircle } from 'lucide-react';
 import PropTypes from 'prop-types';
-import { LoginModal } from './components/LoginModal';
-import { QuestionEditor } from './components/QuestionEditor';
-import PasswordManager from './components/PasswordManager';
-import { initialQuizConfig } from './config'; // Mantén la configuración inicial
-import { loadQuizConfig, saveQuizConfig } from './api'; // Importa las nuevas funciones
+import { initialQuizConfig } from './config';
+import { loadQuizConfig } from './api';
 
 const QuizApp = ({ onLogout }) => {
   // Estados principales
   const [quizConfig, setQuizConfig] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isAdmin, setIsAdmin] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answered, setAnswered] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null); // Nuevo estado para la opción seleccionada
-
-  // Estados para modales
-  const [showLoginModal, setShowLoginModal] = useState(false);
-  const [showPasswordManager, setShowPasswordManager] = useState(false);
-  const [editingQuestion, setEditingQuestion] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   // Cargar configuración al inicio
   useEffect(() => {
@@ -43,33 +34,13 @@ const QuizApp = ({ onLogout }) => {
     };
 
     fetchQuizConfig();
-    
-    // Opcional: Configura polling para actualizar la configuración periódicamente
-    const intervalId = setInterval(fetchQuizConfig, 30000); // Actualiza cada 30 segundos
-    
-    return () => clearInterval(intervalId); // Limpia el intervalo al desmontar
   }, []);
-
-  // Guardar configuración cuando cambie
-  const handleSaveConfig = async (newConfig) => {
-    setIsLoading(true);
-    try {
-      await saveQuizConfig(newConfig);
-      setQuizConfig(newConfig);
-      setError(null);
-    } catch (err) {
-      console.error('Error al guardar la configuración:', err);
-      setError('Error al guardar los cambios.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   // Manejar la respuesta del usuario
   const handleAnswer = (selected) => {
     if (!answered && quizConfig) {
       const correct = selected === quizConfig.questions[currentQuestion].correct;
-      setSelectedOption(selected); // Guardar la opción seleccionada
+      setSelectedOption(selected);
       setIsCorrect(correct);
       if (correct) setScore(score + 1);
       setAnswered(true);
@@ -81,7 +52,7 @@ const QuizApp = ({ onLogout }) => {
     if (quizConfig && currentQuestion < quizConfig.questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
       setAnswered(false);
-      setSelectedOption(null); // Resetear la opción seleccionada
+      setSelectedOption(null);
     } else {
       setShowResult(true);
     }
@@ -93,71 +64,7 @@ const QuizApp = ({ onLogout }) => {
     setScore(0);
     setShowResult(false);
     setAnswered(false);
-    setSelectedOption(null); // Resetear la opción seleccionada
-  };
-
-  // Funciones para administración
-  const handleAdminClick = () => {
-    if (!isAdmin) {
-      setShowLoginModal(true);
-    } else {
-      setIsAdmin(false);
-    }
-  };
-
-  const handleLogin = () => {
-    setIsAdmin(true);
-    setShowLoginModal(false);
-  };
-
-  const handleEditQuestion = (index) => {
-    if (isAdmin && quizConfig) {
-      setEditingQuestion({
-        ...quizConfig.questions[index],
-        index
-      });
-    }
-  };
-
-  const handleSaveQuestion = (question) => {
-    if (!quizConfig) return;
-    
-    const newQuestions = [...quizConfig.questions];
-    if (question.index !== undefined) {
-      // Editar pregunta existente
-      newQuestions[question.index] = question;
-    } else {
-      // Añadir nueva pregunta
-      newQuestions.push(question);
-    }
-    
-    const newConfig = {
-      ...quizConfig,
-      questions: newQuestions
-    };
-    
-    handleSaveConfig(newConfig);
-    setEditingQuestion(null);
-  };
-
-  const handleDeleteQuestion = (index) => {
-    if (isAdmin && quizConfig && window.confirm('¿Estás seguro de que quieres eliminar esta pregunta?')) {
-      const newQuestions = quizConfig.questions.filter((_, i) => i !== index);
-      const newConfig = {
-        ...quizConfig,
-        questions: newQuestions
-      };
-      
-      handleSaveConfig(newConfig);
-    }
-  };
-
-  const handleResetConfig = () => {
-    if (isAdmin && window.confirm('¿Estás seguro de que quieres restaurar la configuración inicial? Se perderán todos los cambios.')) {
-      handleSaveConfig(initialQuizConfig);
-      resetQuiz();
-      setEditingQuestion(null);
-    }
+    setSelectedOption(null);
   };
 
   // Si está cargando inicialmente, muestra un indicador de carga
@@ -183,82 +90,7 @@ const QuizApp = ({ onLogout }) => {
     );
   }
 
-  // Componente AdminPanel
-  const AdminPanel = () => (
-    <div className="admin-panel">
-      <div className="admin-buttons">
-        <button
-          onClick={() => setEditingQuestion({
-            question: "",
-            imageUrl: "/api/placeholder/400/400",
-            options: ["", "", "", ""],
-            correct: 0
-          })}
-          className="admin-button"
-          style={{ backgroundColor: quizConfig.theme.primary }}
-          disabled={isLoading}
-        >
-          <Plus size={16} /> Nueva Pregunta
-        </button>
-        <button
-          onClick={() => setShowPasswordManager(true)}
-          className="admin-button"
-          style={{ backgroundColor: quizConfig.theme.primary }}
-          disabled={isLoading}
-        >
-          <Key size={16} /> Cambiar Contraseña
-        </button>
-        <button
-          onClick={handleResetConfig}
-          className="admin-button"
-          style={{ backgroundColor: quizConfig.theme.error }}
-          disabled={isLoading}
-        >
-          <Settings size={16} /> Restaurar
-        </button>
-      </div>
-
-      {isLoading && (
-        <div className="loading-indicator">Guardando cambios...</div>
-      )}
-
-      <div className="questions-list">
-        {quizConfig.questions.map((q, index) => (
-          <div key={index} className="question-item">
-            <div className="question-header">
-              <strong>Pregunta {index + 1}</strong>
-              <div className="question-actions">
-                <button
-                  onClick={() => handleEditQuestion(index)}
-                  className="action-button"
-                  title="Editar pregunta"
-                  disabled={isLoading}
-                >
-                  <Edit3 size={16} color="white" />
-                </button>
-                <button
-                  onClick={() => handleDeleteQuestion(index)}
-                  className="action-button delete"
-                  title="Eliminar pregunta"
-                  disabled={isLoading}
-                >
-                  <Trash2 size={16} color="white" />
-                </button>
-              </div>
-            </div>
-            <div className="question-content" title={q.question}>
-              {q.question}
-            </div>
-            <div className="question-content" style={{ fontSize: '0.8rem' }}>
-              Respuesta correcta: {q.options[q.correct]}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-
-  // Resto del componente (renderizado principal)
+  // Renderizado principal
   return (
     <div className="quiz-container" style={{ backgroundColor: quizConfig?.theme.background }}>
       {error && (
@@ -278,34 +110,32 @@ const QuizApp = ({ onLogout }) => {
         </div>
       )}
 
-      <header className="quiz-header" 
-        style={{ 
-          background: `linear-gradient(135deg, ${quizConfig?.theme.primary} 0%, ${quizConfig?.theme.primaryLight} 100%)`
-        }}>
-        <h1>{quizConfig?.title}</h1>
-        <div className="header-controls">
-          {!showResult && (
-            <span className="quiz-progress">
-              Pregunta {currentQuestion + 1} de {quizConfig?.questions.length} | Puntaje: {score}
-            </span>
-          )}
-          <div className="button-group">
-            <button
-              onClick={handleAdminClick}
-              className={`admin-toggle ${isAdmin ? 'active' : ''}`}
-              disabled={isLoading}
-            >
-              {isAdmin ? 'Salir del modo admin' : 'Modo admin'}
-            </button>
-            <button 
-              onClick={onLogout}
-              className="logout-button"
-            >
-              Cerrar sesión
-            </button>
-          </div>
-        </div>
-      </header>
+<header className="quiz-header" 
+  style={{ 
+    background: `linear-gradient(135deg, ${quizConfig?.theme.primary} 0%, ${quizConfig?.theme.primaryLight} 100%)`
+  }}>
+  <div className="logo-title-container">
+    <img 
+      src="/solignac.jpg" // Reemplaza esta ruta con la ubicación de tu logo
+      alt="Logo Empresa" 
+      className="company-logo" 
+    />
+    <h1>{quizConfig?.title}</h1>
+  </div>
+  <div className="header-controls">
+    {!showResult && (
+      <span className="quiz-progress">
+        Pregunta {currentQuestion + 1} de {quizConfig?.questions.length} | Puntaje: {score}
+      </span>
+    )}
+    <button 
+      onClick={onLogout}
+      className="logout-button"
+    >
+      Cerrar sesión
+    </button>
+  </div>
+</header>
           
       <main className="quiz-main">
         {showResult ? (
@@ -346,8 +176,11 @@ const QuizApp = ({ onLogout }) => {
             
             <img 
               src={quizConfig?.questions[currentQuestion].imageUrl}
-              alt="Pregunta"
+              alt="Señal de tránsito"
               className="question-image"
+              onError={(e) => {
+                e.target.src = "https://via.placeholder.com/400x400?text=Imagen+no+disponible";
+              }}
             />
 
             <div className="options-grid">
@@ -379,58 +212,23 @@ const QuizApp = ({ onLogout }) => {
             </div>
 
             {answered && (
-              <>
-                <div className={`feedback ${isCorrect ? 'correct' : 'incorrect'}`}>
-                  {isCorrect ? (
-                    <>
-                      <CheckCircle2 size={30} />
-                      <p>¡Correcto!</p>
-                    </>
-                  ) : (
-                    <>
-                      <XCircle size={30} />
-                      <p>Incorrecto. La respuesta correcta era: {quizConfig?.questions[currentQuestion].options[quizConfig?.questions[currentQuestion].correct]}</p>
-                    </>
-                  )}
-                </div>
-                <button 
-                  onClick={handleNext}
-                  className="next-button"
-                  style={{ backgroundColor: quizConfig?.theme.primaryLight }}
-                  disabled={isLoading}
-                >
-                  {currentQuestion < quizConfig?.questions.length - 1 ? 'Siguiente' : 'Ver resultados'}
-                </button>
-              </>
-            )}
+          <div className="fixed-next-button-container">
+            <button 
+              onClick={handleNext}
+              className="fixed-next-button"
+              style={{ 
+                backgroundColor: quizConfig?.theme.primaryLight,
+                boxShadow: `0 -4px 10px rgba(0,0,0,0.1)`
+              }}
+              disabled={isLoading}
+            >
+              {currentQuestion < quizConfig?.questions.length - 1 ? 'Siguiente' : 'Ver resultados'}
+            </button>
+          </div>
+        )}
           </div>
         )}
       </main>
-
-      {isAdmin && <AdminPanel />}
-      
-      {editingQuestion !== null && (
-        <QuestionEditor
-          question={editingQuestion}
-          onSave={handleSaveQuestion}
-          onCancel={() => setEditingQuestion(null)}
-          theme={quizConfig?.theme}
-        />
-      )}
-      
-      {showLoginModal && (
-        <LoginModal 
-          onLogin={handleLogin} 
-          onClose={() => setShowLoginModal(false)} 
-        />
-      )}
-      
-      {showPasswordManager && (
-        <PasswordManager
-          onClose={() => setShowPasswordManager(false)}
-          theme={quizConfig?.theme}
-        />
-      )}
     </div>
   );
 };
