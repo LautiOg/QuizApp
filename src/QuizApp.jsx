@@ -176,7 +176,7 @@ const QuizApp = ({ onLogout }) => {
             
             <img 
               src={quizConfig?.questions[currentQuestion].imageUrl}
-              alt="Señal de tránsito"
+              alt="Pregunta"
               className="question-image"
               onError={(e) => {
                 e.target.src = "https://via.placeholder.com/400x400?text=Imagen+no+disponible";

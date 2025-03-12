@@ -4,7 +4,7 @@ import { initializeAppData } from './api';
 // Objeto con los datos completos de la aplicación
 const quizData = {
   "quizConfig": {
-    "title": "Examen Teórico - Licencia de Conducir Argentina",
+    "title": "Practica Teorica Solignac Automoviles",
     "theme": {
       "primary": "#2563eb",
       "primaryLight": "#3b82f6",

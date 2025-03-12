@@ -9,7 +9,7 @@ export const defaultTheme = {
   
   // Configuración inicial del quiz
   export const initialQuizConfig = {
-    title: "Examen Teórico - Licencia de Conducir Argentina",
+    title: "Practica teorica Solignac Automoviles",
     theme: { ...defaultTheme },
     questions: [
       {
