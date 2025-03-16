@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CheckCircle2, XCircle } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 import PropTypes from 'prop-types';
 import { initialQuizConfig } from './config';
 import { loadQuizConfig } from './api';
@@ -13,7 +13,7 @@ const QuizApp = ({ onLogout }) => {
   const [score, setScore] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [answered, setAnswered] = useState(false);
-  const [isCorrect, setIsCorrect] = useState(false);
+
   const [selectedOption, setSelectedOption] = useState(null);
 
   // Cargar configuración al inicio
@@ -41,7 +41,7 @@ const QuizApp = ({ onLogout }) => {
     if (!answered && quizConfig) {
       const correct = selected === quizConfig.questions[currentQuestion].correct;
       setSelectedOption(selected);
-      setIsCorrect(correct);
+
       if (correct) setScore(score + 1);
       setAnswered(true);
     }
